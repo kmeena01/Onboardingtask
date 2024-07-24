@@ -28,12 +28,14 @@ namespace SpecProj2.StepDefinitions
         [When(@"User creates a new Language record '([^']*)'")]
         public void WhenUserCreatesANewLanguageRecord(string language)
         {
+            Addmultiplelanguageobj.cleardata(driver);
             Addmultiplelanguageobj.addlanguage(driver, language);
         }
         [Then(@"new Language '([^']*)' should be successfully created")]
         public void ThenNewLanguageShouldBeSuccessfullyCreated(string language)
         {
             Addmultiplelanguageobj.verifyaddedinlist(driver, language);
+            Addmultiplelanguageobj.TearDown(driver);
         }
        
         [When(@"User enters new Language '([^']*)'")]
@@ -46,6 +48,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenUserGetsErrorMessageAsDuplicateData()
         {
             Addmultiplelanguageobj.Duplicateerrormessage(driver);
+            Addmultiplelanguageobj.TearDown(driver);
         }
 
         [When(@"clean the existing data and add new language '([^']*)'")]
@@ -58,6 +61,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenNewLanguageUpdatedSuccessfully(string language)
         {
             Console.WriteLine("Language updated successfully");
+            Addmultiplelanguageobj.TearDown(driver);
         }
                
         [When(@"User creates a new Language with empty language '([^']*)' record")]
@@ -70,6 +74,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenUserShouldGetsAnErrorMessage()
         {
             Addmultiplelanguageobj.errormessage(driver);
+            Addmultiplelanguageobj.TearDown(driver);
         }
         [When(@"User enters a new Language '([^']*)' record and click cancel")]
         public void WhenUserEntersANewLanguageRecordAndClickCancel(string language)
@@ -80,6 +85,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenEnteredLanguageCanceledAndNotDisplayInBelowList(string language)
         {
             Addmultiplelanguageobj.verifycanceledinlist(driver, language);
+            Addmultiplelanguageobj.TearDown(driver);
         }
         [When(@"User clears all languages data in the list")]
         public void WhenUserClearsAllLanguagesDataInTheList()
@@ -90,13 +96,15 @@ namespace SpecProj2.StepDefinitions
         public void ThenAllLanguageInTheListDeletedSuccessfully()
         {
             deletelanguageobj.AssertDeletelanguage(driver);
+            Addmultiplelanguageobj.TearDown(driver);
         }
 
         [When(@"User try to create multiple language records")]
         public void WhenUserTryToCreateMultipleLanguageRecords(Table table)
         
             {
-                foreach (var row in table.Rows)
+            Addmultiplelanguageobj.cleardata(driver);
+            foreach (var row in table.Rows)
                 {
                     string languages = row["Language"];
                     Addmultiplelanguageobj.addlanguage(driver, languages);
@@ -109,7 +117,8 @@ namespace SpecProj2.StepDefinitions
         {
                 var expectedLanguages = table.Rows.Select(row => row["Language"]).ToArray();
                 Addmultiplelanguageobj.AssertAllLanguages(driver, expectedLanguages);
-            }
+            Addmultiplelanguageobj.TearDown(driver);
+        }
 
     }
 }

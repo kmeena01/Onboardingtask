@@ -12,13 +12,13 @@ Scenario:1. Verify User able to Add New Skill
 	Scenario:2. Verify User Gets Already exists error message 
 	Given User logging in Mars portal 
 	And User navigates to Skills tab
-	When User creates a new Skill record 'C#' and 'Expert' 
+	When User creates a new Skill record 'Manualtesting' and 'Expert' 
 	Then User should get Already exists error 
 
 	Scenario:3. Verify User Gets Duplicate Error message 
 	Given User logging in Mars portal 
 	And User navigates to Skills tab
-	When User creates new Skill record 'C#' and 'Intermediate'
+	When User creates new Skill record 'Manualtesting' and 'Intermediate'
 	Then User should get Duplicated data error 
 
 	Scenario:4. Verify numbers and special characters accepting 

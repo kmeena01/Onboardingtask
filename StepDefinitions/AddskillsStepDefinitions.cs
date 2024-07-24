@@ -39,11 +39,13 @@ namespace SpecProj2.StepDefinitions
         public void ThenNewSkillShouldBeSuccessfullyCreated(string skill)
         {
             Addnewskillobj.verifyaddedskillinlist(driver, skill);
+            Addnewskillobj.TearDown(driver);
         }
         [Then(@"User should get Already exists error")]
         public void ThenUserShouldGetAlreadyExistsError()
         {
             Addnewskillobj.Duplicateerrormessage(driver);
+            Addnewskillobj.TearDown(driver);
         }
 
         [When(@"User creates new Skill record '([^']*)' and '([^']*)'")]
@@ -56,6 +58,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenUserShouldGetDuplicatedDataError()
         {
             Addnewskillobj.Duplicatedatamessage(driver);
+            Addnewskillobj.TearDown(driver);
         }
         [When(@"User creates new Skill record '([^']*)' '([^']*)'")]
         public void WhenUserCreatesNewSkillRecord(string skill, string level)
@@ -67,6 +70,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenNewSkillAndLevelAddedInBelowList(string skill)
         {
             Console.WriteLine("Skill added successfully");
+            Addnewskillobj.TearDown(driver);
         }
         [When(@"User clears already skill and edits with new skill '([^']*)' '([^']*)'")]
         public void WhenUserClearsAlreadySkillAndEditsWithNewSkill(string skill, string level)
@@ -78,6 +82,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenNewSkillUpdatedSuccessfully(string skill)
         {
             Editskillobj.verifyupdatedskill(driver, skill);
+            Addnewskillobj.TearDown(driver);
         }
         [When(@"User try to give '([^']*)' skill and '([^']*)'")]
         public void WhenUserTryToGiveSkillAnd(string skill, string level)
@@ -89,6 +94,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenGetsAnErrorPleaseEnterSkillAndExperienceLevel()
         {
             Addnewskillobj.errormessage(driver);
+            Addnewskillobj.TearDown(driver);
         }
         [When(@"User tries to give '([^']*)' skill and '([^']*)'")]
         public void WhenUserTriesToGiveSkillAnd(string skill, string level)
@@ -100,6 +106,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenGetsErrorPleaseEnterSkillAndExperienceLevel()
         {
             Addnewskillobj.errormessage(driver);
+            Addnewskillobj.TearDown(driver);
         }
         [When(@"User tries to delete the skills")]
         public void WhenUserTriesToDeleteTheSkills()
@@ -110,6 +117,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenUserSuccessfullyDeletesAllTheSkill()
         {
             Deleteskillobj.AssertDeleteskill(driver);
+            Addnewskillobj.TearDown(driver);
         }
 
         [When(@"User tries to cancel skill '([^']*)' and '([^']*)' by not adding")]
@@ -121,6 +129,7 @@ namespace SpecProj2.StepDefinitions
         public void ThenUserSuccessfullyCancelsTheSkill(string skill)
         {
             Console.WriteLine("Skill canceled successfully");
+            Addnewskillobj.TearDown(driver);
         }
         [Given(@"Clears all the existing skills")]
         public void GivenClearsAllTheExistingSkills()
@@ -146,6 +155,7 @@ namespace SpecProj2.StepDefinitions
             //var expectedlevels = table.Rows.Select(row => row["Level"]).ToArray();
             //Addnewskillobj.AssertAllSkills(driver, expectedSkills, expectedlevels);
             Console.WriteLine("Skills and Levels Added successfully");
+            Addnewskillobj.TearDown(driver);
 
         }
 

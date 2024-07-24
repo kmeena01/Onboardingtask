@@ -152,7 +152,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("User navigates to Skills tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.When("User creates a new Skill record \'C#\' and \'Expert\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User creates a new Skill record \'Manualtesting\' and \'Expert\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
  testRunner.Then("User should get Already exists error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -195,7 +195,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("User navigates to Skills tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
- testRunner.When("User creates new Skill record \'C#\' and \'Intermediate\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User creates new Skill record \'Manualtesting\' and \'Intermediate\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
  testRunner.Then("User should get Duplicated data error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

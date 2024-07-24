@@ -112,6 +112,37 @@ namespace SpecProj2.Pages
                 }
             }
         }
-       
+        public void cleardata(IWebDriver driver)
+        {
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            while (true)
+            {
+                try
+                {
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i")));
+                    // Find the delete button for the last record
+                    IWebElement deleteButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i"));
+                    deleteButton.Click();
+                    Thread.Sleep(3000);
+                }
+                catch (NoSuchElementException)
+                {
+                    // Break the loop if no more delete buttons are found
+                    break;
+                }
+                catch (WebDriverTimeoutException)
+                {
+                    // Break the loop if the delete button is not found within the wait time
+                    break;
+                }
+            }
+        }
+        public void TearDown(IWebDriver driver)
+        {
+            driver.Quit();
+        }
+
+
     }
 }
