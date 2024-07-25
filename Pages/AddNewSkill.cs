@@ -137,6 +137,10 @@ namespace SpecProj2.Pages
                 }
             }
         }
+        public void TearDown(IWebDriver driver)
+        {
+            driver.Quit();
+        }
     }
 }
 
