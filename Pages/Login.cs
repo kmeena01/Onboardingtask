@@ -6,15 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SpecProj2.Utilities;
 
 namespace SpecProj2.Pages
 {
-    public class Login
+    internal class Login : Hook
     {
-        public void login(IWebDriver driver)
-        {
-            driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("http://localhost:5000/Home");
+        public void loginstep() 
+        {            
             IWebElement siginbutton = driver.FindElement(By.XPath("/html/body/div/div/div/div/div/div[1]/div/a"));
             siginbutton.Click();
             Thread.Sleep(1000);
@@ -25,7 +24,8 @@ namespace SpecProj2.Pages
             }
             catch (Exception ex)
             {
-                //Assert.Fail("Confirm your email  ", ex.Message);
+                //Assert.Fail("Confirm your email", ex.Message);
+                Assert.Fail(ex.Message);
             }
             IWebElement passwordTextBox = driver.FindElement(By.Name("password"));
             passwordTextBox.SendKeys("Sriram_007");

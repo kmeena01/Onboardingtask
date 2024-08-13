@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace SpecProj2.Utilities
 {
     public class CommonDriver
     {
-        public IWebDriver driver;
+        public static IWebDriver driver;
+        public void Initialize()
+        {
+            driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+        }
     }
 }

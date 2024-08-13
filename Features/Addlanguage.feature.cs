@@ -104,22 +104,22 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.When("User creates a new Language record \'English\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User creates a new Language record \'English\' \'Fluent\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
- testRunner.Then("new Language \'English\' should be successfully created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("new Language \'English\' and \'Fluent\' should be successfully created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("2. Verify User Gets Duplicate Error message")]
-        public virtual void _2_VerifyUserGetsDuplicateErrorMessage()
+        [NUnit.Framework.DescriptionAttribute("2. Verify User able to add small case same language")]
+        public virtual void _2_VerifyUserAbleToAddSmallCaseSameLanguage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Verify User Gets Duplicate Error message", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Verify User able to add small case same language", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 10
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -144,22 +144,22 @@ this.ScenarioInitialize(scenarioInfo);
 testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 12
-testRunner.When("User enters new Language \'English\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("User enters new Language \'english\' \'Fluent\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
-testRunner.Then("User gets Error message as Duplicate Data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("Language \'english\' and \'Fluent\' should be successfully created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("3. Verify User able to Update New Language")]
-        public virtual void _3_VerifyUserAbleToUpdateNewLanguage()
+        [NUnit.Framework.DescriptionAttribute("3. Verify User Gets Duplicate Error message")]
+        public virtual void _3_VerifyUserGetsDuplicateErrorMessage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. Verify User able to Update New Language", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. Verify User Gets Duplicate Error message", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 15
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -181,25 +181,25 @@ testRunner.Then("User gets Error message as Duplicate Data", ((string)(null)), (
             {
                 this.ScenarioStart();
 #line 16
- testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 17
- testRunner.When("clean the existing data and add new language \'Malay\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("User enters new Language \'English\' and \'Native/Bilingual\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
- testRunner.Then("new Language \'Malay\' Updated successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("User gets Error message as Duplicate Data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("4. Verify User gets error message")]
-        public virtual void _4_VerifyUserGetsErrorMessage()
+        [NUnit.Framework.DescriptionAttribute("4. Verify User able to Update New Language")]
+        public virtual void _4_VerifyUserAbleToUpdateNewLanguage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. Verify User gets error message", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. Verify User able to Update New Language", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 20
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -224,22 +224,22 @@ testRunner.Then("User gets Error message as Duplicate Data", ((string)(null)), (
  testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
- testRunner.When("User creates a new Language with empty language \'\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("clean the existing data and add new language \'Malay\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 23
- testRunner.Then("User should gets an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("new Language \'Malay\' Updated successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("5. Verify User enter language, level and cancel")]
-        public virtual void _5_VerifyUserEnterLanguageLevelAndCancel()
+        [NUnit.Framework.DescriptionAttribute("5. Verify User gets error message")]
+        public virtual void _5_VerifyUserGetsErrorMessage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. Verify User enter language, level and cancel", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. Verify User gets error message", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 25
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -261,27 +261,27 @@ testRunner.Then("User gets Error message as Duplicate Data", ((string)(null)), (
             {
                 this.ScenarioStart();
 #line 26
-testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 27
-testRunner.When("User enters a new Language \'Tamil\' record and click cancel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User creates a new Language with empty language \'\' and \'Basic\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 28
-testRunner.Then("Entered\'Tamil\' language canceled and not display in below list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("User should gets an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("6. Verify User able to delete existing languages")]
-        public virtual void _6_VerifyUserAbleToDeleteExistingLanguages()
+        [NUnit.Framework.DescriptionAttribute("6. Verify User enter language, level and cancel")]
+        public virtual void _6_VerifyUserEnterLanguageLevelAndCancel()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. Verify User able to delete existing languages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. Verify User enter language, level and cancel", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 30
-this.ScenarioInitialize(scenarioInfo);
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -301,25 +301,25 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 31
- testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 32
- testRunner.When("User clears all languages data in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("User enters a new Language \'Tamil\' record and click cancel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
- testRunner.Then("All language in the list deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("Entered\'Tamil\' language canceled and not display in below list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("7. Verify User able to add multiple language")]
-        public virtual void _7_VerifyUserAbleToAddMultipleLanguage()
+        [NUnit.Framework.DescriptionAttribute("7. Verify User able to delete existing languages")]
+        public virtual void _7_VerifyUserAbleToDeleteExistingLanguages()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("7. Verify User able to add multiple language", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("7. Verify User able to delete existing languages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -341,32 +341,132 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 36
+ testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 37
+ testRunner.When("User clears all languages data in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 38
+ testRunner.Then("All language in the list deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("8. Verify User able to add Mixed characters")]
+        public virtual void _8_VerifyUserAbleToAddMixedCharacters()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("8. Verify User able to add Mixed characters", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 40
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 41
+testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 42
+testRunner.When("User enter new Language \'s6_d4\' \'Fluent\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 43
+testRunner.Then("Language \'s6_d4\' and \'Fluent\' should successfully created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("9. Verify User able to add multiple language")]
+        public virtual void _9_VerifyUserAbleToAddMultipleLanguage()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("9. Verify User able to add multiple language", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 45
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 46
 testRunner.Given("User logs into Mars Portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Language"});
+                            "Language",
+                            "",
+                            "Level"});
                 table1.AddRow(new string[] {
-                            "French"});
+                            "French",
+                            "",
+                            "Basic"});
                 table1.AddRow(new string[] {
-                            "Tamil"});
+                            "Tamil",
+                            "",
+                            "Native/Bilingual"});
                 table1.AddRow(new string[] {
-                            "Hindi"});
+                            "Hindi",
+                            "",
+                            "Conversational"});
                 table1.AddRow(new string[] {
-                            "Malay"});
-#line 37
-testRunner.When("User try to create multiple language records", ((string)(null)), table1, "When ");
+                            "Malay",
+                            "",
+                            "Conversational"});
+#line 47
+testRunner.When("User try to create multiple languages records", ((string)(null)), table1, "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Language"});
+                            "Language",
+                            "",
+                            "Level"});
                 table2.AddRow(new string[] {
-                            "French"});
+                            "French",
+                            "",
+                            "Basic"});
                 table2.AddRow(new string[] {
-                            "Tamil"});
+                            "Tamil",
+                            "",
+                            "Native/Bilingual"});
                 table2.AddRow(new string[] {
-                            "Hindi"});
+                            "Hindi",
+                            "",
+                            "Conversational"});
                 table2.AddRow(new string[] {
-                            "Malay"});
-#line 44
+                            "Malay",
+                            "",
+                            "Conversational"});
+#line 54
 testRunner.Then("User created multiple records successfully", ((string)(null)), table2, "Then ");
 #line hidden
             }

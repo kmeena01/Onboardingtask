@@ -8,116 +8,131 @@ using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 using System.Reflection.Emit;
 using OpenQA.Selenium.Support.UI;
+using SpecProj2.Utilities;
 
 namespace SpecProj2.StepDefinitions
 {
     [Binding]
-    public class AddlangStepDefinitions
+    public class AddlangStepDefinitions : CommonDriver
     {
-        IWebDriver driver = new ChromeDriver();
         Login Loginobj = new Login();
-        Addmultiplelanguage Addmultiplelanguageobj = new Addmultiplelanguage();
-        Editlanguage Editlanguageobj = new Editlanguage();
-        Deletelanguage deletelanguageobj = new Deletelanguage();
+        Addlanguage Addlanguageobj = new Addlanguage();
+              
 
         [Given(@"User logs into Mars Portal")]
         public void GivenUserLogsIntoMarsPortal()
         {
-            Loginobj.login(driver);
+            Loginobj.loginstep();
         }
-        [When(@"User creates a new Language record '([^']*)'")]
-        public void WhenUserCreatesANewLanguageRecord(string language)
+        [When(@"User creates a new Language record '([^']*)' '([^']*)'")]
+        public void WhenUserCreatesANewLanguageRecord(string language, string level)
         {
-            Addmultiplelanguageobj.cleardata(driver);
-            Addmultiplelanguageobj.addlanguage(driver, language);
+            Addlanguageobj.cleardata();
+            Addlanguageobj.addlanguage(language, level);
         }
-        [Then(@"new Language '([^']*)' should be successfully created")]
-        public void ThenNewLanguageShouldBeSuccessfullyCreated(string language)
+        [Then(@"new Language '([^']*)' and '([^']*)' should be successfully created")]
+        public void ThenNewLanguageAndShouldBeSuccessfullyCreated(string language, string level)
         {
-            Addmultiplelanguageobj.verifyaddedinlist(driver, language);
-            Addmultiplelanguageobj.TearDown(driver);
+            Addlanguageobj.verifyaddedinlist(language, level);
         }
-       
-        [When(@"User enters new Language '([^']*)'")]
-        public void WhenUserEntersNewLanguage(string language)
+        [When(@"User enters new Language '([^']*)' '([^']*)'")]
+        public void WhenUserEntersNewLanguage(string language, string level)
         {
-            Addmultiplelanguageobj.addlanguage(driver, language);
+            Addlanguageobj.addlanguage(language, level);
         }
+        [Then(@"Language '([^']*)' and '([^']*)' should be successfully created")]
+        public void ThenLanguageAndShouldBeSuccessfullyCreated(string language, string level)
+        {
+           Addlanguageobj.verifyaddedinlist(language, level);
+        }
+
+
+
+        [When(@"User enters new Language '([^']*)' and '([^']*)'")]
+        public void WhenUserEntersNewLanguageAnd(string language, string level)
+        {
+            Addlanguageobj.addlanguage(language, level);
+        }
+
 
         [Then(@"User gets Error message as Duplicate Data")]
         public void ThenUserGetsErrorMessageAsDuplicateData()
         {
-            Addmultiplelanguageobj.Duplicateerrormessage(driver);
-            Addmultiplelanguageobj.TearDown(driver);
+            Addlanguageobj.Duplicateerrormessage();
         }
 
         [When(@"clean the existing data and add new language '([^']*)'")]
         public void WhenCleanTheExistingDataAndAddNewLanguage(string language)
         {
-            Editlanguageobj.updatebutton(driver, language);
+            Addlanguageobj.updatebutton(language);
         }
 
         [Then(@"new Language '([^']*)' Updated successfully")]
         public void ThenNewLanguageUpdatedSuccessfully(string language)
         {
             Console.WriteLine("Language updated successfully");
-            Addmultiplelanguageobj.TearDown(driver);
         }
-               
-        [When(@"User creates a new Language with empty language '([^']*)' record")]
-        public void WhenUserCreatesANewLanguageWithEmptyLanguageRecord(string language)
+        [When(@"User creates a new Language with empty language '([^']*)' and '([^']*)' record")]
+        public void WhenUserCreatesANewLanguageWithEmptyLanguageAndRecord(string language, string level)
         {
-            Addmultiplelanguageobj.addlanguage(driver, language);
+            Addlanguageobj.addlanguage(language, level);
         }
 
         [Then(@"User should gets an error message")]
         public void ThenUserShouldGetsAnErrorMessage()
         {
-            Addmultiplelanguageobj.errormessage(driver);
-            Addmultiplelanguageobj.TearDown(driver);
+            Addlanguageobj.errormessage();
         }
         [When(@"User enters a new Language '([^']*)' record and click cancel")]
         public void WhenUserEntersANewLanguageRecordAndClickCancel(string language)
         {
-            Addmultiplelanguageobj.cancelbutton(driver, language);
+            Addlanguageobj.cancelbutton(language);
         }
         [Then(@"Entered'([^']*)' language canceled and not display in below list")]
         public void ThenEnteredLanguageCanceledAndNotDisplayInBelowList(string language)
         {
-            Addmultiplelanguageobj.verifycanceledinlist(driver, language);
-            Addmultiplelanguageobj.TearDown(driver);
+            Addlanguageobj.verifycanceledinlist(language);
         }
         [When(@"User clears all languages data in the list")]
         public void WhenUserClearsAllLanguagesDataInTheList()
         {
-            deletelanguageobj.deletedata(driver);
+            Addlanguageobj.deletedata();
         }
         [Then(@"All language in the list deleted successfully")]
         public void ThenAllLanguageInTheListDeletedSuccessfully()
         {
-            deletelanguageobj.AssertDeletelanguage(driver);
-            Addmultiplelanguageobj.TearDown(driver);
+            Addlanguageobj.AssertDeletelanguage();
+        }
+        [When(@"User enter new Language '([^']*)' '([^']*)'")]
+        public void WhenUserEnterNewLanguage(string language, string level)
+        {
+            Addlanguageobj.addlanguage(language, level);
+        }
+        [Then(@"Language '([^']*)' and '([^']*)' should successfully created")]
+        public void ThenLanguageAndShouldSuccessfullyCreated(string language, string level)
+        {
+            Addlanguageobj.verifyaddedinlist(language, level);
         }
 
-        [When(@"User try to create multiple language records")]
-        public void WhenUserTryToCreateMultipleLanguageRecords(Table table)
-        
-            {
-            Addmultiplelanguageobj.cleardata(driver);
+
+        [When(@"User try to create multiple languages records")]
+        public void WhenUserTryToCreateMultipleLanguagesRecords(Table table)
+        {
+            Addlanguageobj.cleardata();
             foreach (var row in table.Rows)
-                {
-                    string languages = row["Language"];
-                    Addmultiplelanguageobj.addlanguage(driver, languages);
-                }
+            {
+                string languages = row["Language"];
+                string levels = row["Level"];
+                Addlanguageobj.addlanguage(languages, levels);
             }
+        }
 
 
             [Then(@"User created multiple records successfully")]
         public void ThenUserCreatedMultipleRecordsSuccessfully(Table table)
         {
                 var expectedLanguages = table.Rows.Select(row => row["Language"]).ToArray();
-                Addmultiplelanguageobj.AssertAllLanguages(driver, expectedLanguages);
-            Addmultiplelanguageobj.TearDown(driver);
+            Addlanguageobj.AssertAllLanguages(expectedLanguages);
         }
 
     }
